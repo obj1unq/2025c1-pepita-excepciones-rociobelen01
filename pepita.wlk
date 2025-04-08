@@ -50,7 +50,7 @@ object pepon {
 	}
 		
 	method comer(comida) {
-		energia += energia + comida.energiaQueAporta() / 2
+		energia = energia + comida.energiaQueAporta() / 2
 	}
 		
 	method volar(distancia) {
@@ -74,3 +74,41 @@ object roque {
 	}
 }
 
+
+// Excepcion
+
+// Todo lo que pongas en un if despues de poner un error no se ejecuta 
+// self.error()"Mensaje que quiero dar")
+//
+// energia += 0 -> No realiza cambio por lo tanto no finaliza el programa 
+// Para las exceociones tener los casos donde si se puede hacer
+// method hacer(){
+// 	self.validar()
+// 	<logica de negocios >
+// }
+
+// import.pepon.*
+
+// describe "Pepita"{
+// 	test "Cuando vuelva 10 con energia 100, sua energia es 80"
+// pepita.volar(10)
+// 	assert.equals(80, pepita.energia())
+// 				CADA TEST ES INDEPENDIENTE
+// test ""Cuando come alpiste su energia pasa de 100 a 120"
+// 	pepita.comer(alpiste)
+// 	assert.equals(120, pepita.energia)
+
+// test "Con energia 100 no puede volar 100"
+// 	asset.notThat(120, pepon.puedeVolar())
+	
+// test "Con energia 100 falla al querer volar 91"
+//(assert. throwException(pepita.volar)  <- pongo ahi lo que va a
+// 	pepita.volar(91)
+// 	assert.equals(100, pepita.energia())
+// Nunca llega a hacer el assert porque falla antes por excepcion 
+// }
+
+// Usualmente vamos a usar :
+// assert.equals 
+// assert.that
+// assert.notThat(value)
